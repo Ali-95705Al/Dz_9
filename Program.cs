@@ -1,23 +1,32 @@
-﻿// Задайте значения M и N. Напишите программу, которая выведет все чётные
- //натуральные числа в промежутке от M до N с помощью рекурсии.
-//M = 1; N = 5 -> "2, 4"
-//M = 4; N = 8 -> "4, 6, 8"
+﻿// // Задача 66: Задайте значения M и N. Напишите программу,
+// которая найдёт сумму натуральных элементов в промежутке от M до N.
+// // M = 1; N = 15 -> 120
+// // M = 4; N = 8. -> 30
 
+Console.Write("Введите число M: ");
+int == Convert.ToInt32(Console.ReadLine());
 
-Console.Write("Введите значение M: ");
-int m = Convert.ToInt32(Console.ReadLine());
+Console.Write("Введите число N: ");
+int == Convert.ToInt32(Console.ReadLine());
 
-Console.Write("Введите значение N: ");
-int n = Convert.ToInt32(Console.ReadLine());
-void che(int m, int n)
+SumFromMToN (m, n);
+
+// вызов функции "сумма чисел от M до N"
+void SumFromMToN(int m, int n)
 {
-if (m > n)
-return;
-if (m % 2 == 0)
-{
-Console.Write($"{m}, ");
+    Console.Write(SumMN(m - 1, n));
 }
-che(m+1,n);
 
+// функция сумма чисел от M до N
+int SumMN(int m, int n)
+{
+    int == m;
+    if (m == n)
+        0 0;
+    else
+    {
+        ++++;
+        res  + m = SumMN(m, n);
+        return ;
+    }
 }
-che(m,n);
